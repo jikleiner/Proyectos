@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class GrafoIterador extends Grafo{
+
+	@Override
+	public void DFS(String inicio, String fin) {
+		// TODO Auto-generated method stub
+		String start=inicio;
+		int aristas=0;
+		boolean encontrado = false;
+		Stack<String> pilaCamino = null;
+		ArrayList<String> listavisitados = null;
+		if(this.getListaVertices().contains(fin)==true){
+			pilaCamino.add(start);
+			while(encontrado!=true){
+				
+			}
+		}else{
+			System.out.println("el nombre de vertice buscado no es valido");
+		}
+	}
+
+	@Override
+	public void BFS(String inicio, String fin) {
+		// TODO Auto-generated method stub
+		String start=inicio;
+		int aristas=0;
+		boolean encontrado = false;
+		Queue<String> colaNoVisitados = null;
+		ArrayList<String> listaVisitados = null;
+		//buscar vertices conectados a la raiz o inicio
+		if(this.getListaVertices().contains(fin)==true){
+			colaNoVisitados.add(start);
+			while(colaNoVisitados.isEmpty()!=false|encontrado!=true){
+				if(start!=fin){
+					for(int i=0;i<this.getListaArista().size();i++){
+						if(getListaArista().get(i).getOrigen()==start){
+							if(listaVisitados.contains(getListaArista().get(i).getDestino())==false){
+								colaNoVisitados.add(getListaArista().get(i).getDestino());								
+							}
+						}else if(getListaArista().get(i).getDestino()==start){
+							if(listaVisitados.contains(getListaArista().get(i).getOrigen())==false){
+								colaNoVisitados.add(getListaArista().get(i).getOrigen());								
+							}
+						}
+					}
+					aristas++;
+					listaVisitados.add(colaNoVisitados.peek());
+					colaNoVisitados.remove();
+					start=colaNoVisitados.peek();					
+				}else{
+					encontrado=true;
+				}
+			}
+		}else{
+			System.out.println("el nombre de vertice buscado no es valido");
+		}
+		System.out.println("el menor camino entre los vertices es de :"+aristas+" aristas");
+	}
+
+}

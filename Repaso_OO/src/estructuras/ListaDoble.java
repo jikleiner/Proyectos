@@ -1,0 +1,170 @@
+package estructuras;
+
+public class ListaDoble implements ListaEnlazadaD{
+	private NodoDoble cabezera;
+	private NodoDoble ultimo;
+	
+
+	public NodoDoble getCabezera() {
+		return cabezera;
+	}
+
+	public void setCabezera(NodoDoble pri) {
+		this.cabezera = pri;
+	}
+
+	public NodoDoble getUltimo() {
+		return ultimo;
+	}
+
+	public void setUltimo(NodoDoble ult) {
+		this.ultimo = ult;
+	}
+	
+	@Override
+	public void Vaciar() {
+		// TODO Auto-generated method stub
+		cabezera.setSig(null);
+		ultimo.setAnt(null);
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void Insertar(Comparable dato) {
+		// TODO Auto-generated method stub
+		  NodoDoble nuevo = new NodoDoble (dato);
+		  NodoDoble auxiliar = this.cabezera;
+		  NodoDoble auxAnterior = this.cabezera;
+		  if(this.EsVacia()){
+			  this.cabezera = nuevo;
+			  this.ultimo = nuevo;
+		  }else if(((Comparable) nuevo.getDato()).compareTo(this.getCabezera().getDato())<0){
+			  nuevo.setSig(this.getCabezera());
+			  this.setCabezera(nuevo);
+		  }else if(((Comparable) nuevo.getDato()).compareTo(this.getUltimo().getDato())>0){
+			  this.ultimo.setSig(nuevo);
+			  nuevo.setAnt(this.getUltimo());
+			  this.setUltimo(nuevo);
+		  }else{
+			  while(auxiliar != null && ((Comparable) nuevo.getDato()).compareTo(auxiliar.getDato()) > 0){
+				  auxAnterior = auxiliar;
+				  auxiliar = auxiliar.getSig();
+			  }
+			  auxAnterior.setSig(nuevo);
+			  auxiliar.setAnt(nuevo);
+			  nuevo.setAnt(auxAnterior);
+			  nuevo.setSig(auxiliar);
+		  }
+	}
+
+	@Override
+	public boolean EsVacia() {
+		// TODO Auto-generated method stub
+		if(cabezera==null&&ultimo==null){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public boolean Buscar(Comparable dato) {
+		// TODO Auto-generated method stub
+		NodoDoble auxiliar = this.getCabezera();
+		boolean salida = false;
+		while(auxiliar != null){
+			if(((Comparable) auxiliar.getDato()).compareTo(dato) == 0){
+				salida = true;
+				return salida;
+			}else{
+				auxiliar = auxiliar.getSig();
+			}
+		}
+		return salida;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Object BuscarOb(Comparable dato) {
+		// TODO Auto-generated method stub
+		NodoDoble auxiliar = this.getCabezera();
+		while(auxiliar != null){
+			if(((Comparable) auxiliar.getDato()).compareTo(dato) == 0){
+				return auxiliar.getDato();
+			}else{
+				auxiliar = auxiliar.getSig();
+			}
+		}
+		return null;
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public Object Eliminar(Comparable dato) {
+		// TODO Auto-generated method stub
+		NodoDoble auxiliar = this.getCabezera();
+		NodoDoble auxAnterior = null;
+		Object salida = null;
+		if (this.EsVacia()){
+			System.out.println("Lista Vacia");
+		}else if(dato.compareTo(this.getCabezera().getDato()) == 0){
+			if(dato.compareTo(this.getUltimo().getDato()) == 0){
+				salida = this.cabezera.getDato();
+				this.setCabezera(null);
+				this.setUltimo(null);				
+			}else{
+				salida = this.cabezera.getDato();
+				this.setCabezera(this.cabezera.getSig());				
+			}
+		}else if(dato.compareTo(this.getUltimo().getDato()) == 0){
+			salida = this.ultimo.getDato();
+			this.setUltimo(ultimo.getAnt());
+			ultimo.setSig(null);
+		}else{
+			while(auxiliar != null && dato.compareTo(auxiliar.getDato()) != 0){
+				auxAnterior = auxiliar;
+				auxiliar = auxiliar.getSig();
+			}
+			if(auxiliar != null){
+				salida = auxiliar.getDato();
+				auxAnterior.setSig(auxiliar.getSig());
+				auxiliar.getSig().setAnt(auxAnterior);
+			}
+		}
+		return salida;
+	}
+
+	@Override
+	public String ListarAscendente() {
+		// TODO Auto-generated method stub
+	    String salida = "";
+	    NodoDoble auxiliar = this.getCabezera();
+	    if(this.EsVacia()==true){
+	    	System.out.println("no se an cargado datos aun");
+	    }else{
+		    while(auxiliar != null){
+		    	salida += auxiliar.getDato().toString()+"\n";
+		    	auxiliar = auxiliar.getSig();
+		    }	    	
+	    }
+	    return salida;
+	}
+
+	@Override
+	public String ListarDescendente() {
+		// TODO Auto-generated method stub
+	    String salida = "";
+	    NodoDoble auxiliar = this.getUltimo();
+	    if(this.EsVacia()==true){
+	    	System.out.println("no se an cargado datos aun");
+	    }else{
+		    while(auxiliar != null){
+		    	salida += auxiliar.getDato().toString()+"\n";
+		    	auxiliar = auxiliar.getAnt();
+		    }
+	    }
+	    return salida;
+	}
+	
+	
+}

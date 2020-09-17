@@ -1,0 +1,4 @@
+#Sun Apr 23 21:32:47 ART 2017
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=matches

@@ -1,0 +1,49 @@
+package model;
+import estructura.*;
+
+public class Cliente {
+
+	private String nombre;
+	private String apellido;
+	private int dni;
+	private Cola cuentasCliente;
+	
+	//constructor
+	public Cliente(String nombre, int dni) {
+		this.nombre = nombre;
+		this.dni = dni;
+		cuentasCliente=new Cola();
+	}
+	
+	//getters y setters
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public int getDni() {
+		return dni;
+	}
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
+
+	public Cola getCuentasCliente() {
+		return cuentasCliente;
+	}
+
+	public void setCuentasCliente(Cola cuentasCliente) {
+		this.cuentasCliente = cuentasCliente;
+	}
+
+}

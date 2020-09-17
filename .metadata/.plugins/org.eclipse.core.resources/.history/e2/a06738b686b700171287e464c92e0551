@@ -1,0 +1,43 @@
+
+public class Arista {
+	private String origen;
+	private String destino;
+	private int costo;
+	
+	public Arista(String origen, String destino, int costo) {
+		super();
+		this.origen = origen;
+		this.destino = destino;
+		this.costo = costo;
+	}
+
+	public String getOrigen() {
+		return origen;
+	}
+
+	public void setOrigen(String origen) {
+		this.origen = origen;
+	}
+
+	public String getDestino() {
+		return destino;
+	}
+
+	public void setDestino(String destino) {
+		this.destino = destino;
+	}
+
+	public int getCosto() {
+		return costo;
+	}
+
+	public void setCosto(int costo) {
+		this.costo = costo;
+	}
+
+	@Override
+	public String toString() {
+		return "Arista [origen=" + origen + ", destino=" + destino + ", costo=" + costo + "]";
+	}
+	
+}

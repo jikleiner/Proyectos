@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;parcial_modelo/src/estructura&apos;&#x0D;&#x0A;- Original project: &apos;Arbol_Binario&apos;&#x0D;&#x0A;- Destination element: &apos;parcial_modelo/src/estructura&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Estructuras.Arbol.java&#x0D;&#x0A;     Estructuras.Nodo.java" description="Copy compilation units" destination="=parcial_modelo/src&lt;estructura" element1="/src&lt;Estructuras{Arbol.java" element2="/src&lt;Estructuras{Nodo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1509319558411" units="2" version="1.0"/>
+</session>

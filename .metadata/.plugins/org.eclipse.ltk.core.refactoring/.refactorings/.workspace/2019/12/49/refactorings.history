@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;PDP_TP_JKLEINER&apos;" deleteContents="false" description="Delete resource &apos;PDP_TP_JKLEINER&apos;" element1="/PDP_TP_JKLEINER" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1575321524123"/>
+</session>

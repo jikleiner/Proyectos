@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Aug 13 20:14:18 ART 2020
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\jklei_000\\Desktop\\Proyectos\\spring-mvc-demo\\WebContent\\WEB-INF\\lib\\spring-web-5.2.8.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.2.8.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\jklei_000\\Desktop\\Proyectos\\spring-mvc-demo\\WebContent\\WEB-INF\\lib\\spring-web-5.2.8.RELEASE.jar=WEB-INF/lib/spring-web-5.2.8.RELEASE.jar

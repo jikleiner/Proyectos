@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;vista.menu.java&apos; to &apos;Menu.java&apos;&#x0D;&#x0A;- Original project: &apos;TP3_Kleiner&apos;&#x0D;&#x0A;- Original element: &apos;vista.menu.java&apos;&#x0D;&#x0A;- Renamed element: &apos;vista.Menu.java&apos;" description="Rename compilation unit &apos;menu.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;vista{menu.java" name="Menu.java" references="false" stamp="1496192555364" version="1.0"/>
+</session>

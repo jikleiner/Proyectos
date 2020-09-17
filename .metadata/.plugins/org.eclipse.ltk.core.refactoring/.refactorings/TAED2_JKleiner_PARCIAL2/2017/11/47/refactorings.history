@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;main&apos; to &apos;TAED2_Recuperatorio_1erParcial/src&apos;&#x0D;&#x0A;- Original project: &apos;TAED2_JKleiner_PARCIAL2&apos;&#x0D;&#x0A;- Destination element: &apos;TAED2_Recuperatorio_1erParcial/src&apos;&#x0D;&#x0A;- Original element: &apos;TAED2_JKleiner_PARCIAL2/src/main&apos;" description="Copy package" destination="=TAED2_Recuperatorio_1erParcial/src" element1="/src&lt;main" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1510697991654" version="1.0"/>
+</session>

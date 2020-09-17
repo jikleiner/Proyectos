@@ -1,0 +1,28 @@
+
+public class GrafoRecursivo extends Grafo{
+
+	/*@Override
+	public void DFS() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void BFS() {
+		// TODO Auto-generated method stub
+		
+	}*/
+
+	@Override
+	public void DFS(String inicio, String fin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void BFS(String inicio, String fin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

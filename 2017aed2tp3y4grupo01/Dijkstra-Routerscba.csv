@@ -1,0 +1,14 @@
+Codigo;Nombre;Tipo;Peso;Origen;Destino
+A;Router Cordoba;N;;;
+B;Router Alta Gracia;N;;;
+C;Router Villa Maria;N;;;
+D;Router Rio cuarto;N;;;
+E;Router La carlota;N;;;
+F;Router Laboulaye;N;;;
+G;;A;2;A;B
+H;;A;1;A;C
+I;;A;1;B;D
+J;;A;2;D;F
+K;;A;3;C;D
+L;;A;4;C;E
+M;;A;2;E;F

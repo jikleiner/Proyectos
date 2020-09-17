@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;estructura&apos; to &apos;Librerias_ED/src/estructuras&apos;&#x0D;&#x0A;- Original project: &apos;TP3_Kleiner&apos;&#x0D;&#x0A;- Destination element: &apos;Librerias_ED/src/estructuras&apos;&#x0D;&#x0A;- Original element: &apos;TP3_Kleiner/src/estructura&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=Librerias_ED/src&lt;estructuras" element1="/src&lt;estructura" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1497394005289" version="1.0"/>
+</session>

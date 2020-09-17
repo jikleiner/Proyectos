@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;TAED2_JKleiner_PARCIAL1/src/controlador&apos;&#x0D;&#x0A;- Original project: &apos;AED2-2017_GRUPO_1&apos;&#x0D;&#x0A;- Destination element: &apos;TAED2_JKleiner_PARCIAL1/src/controlador&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     lib.MiException.java&#x0D;&#x0A;     lib.Validaciones.java" description="Copy compilation units" destination="=TAED2_JKleiner_PARCIAL1/src&lt;controlador" element1="/src&lt;lib{MiException.java" element2="/src&lt;lib{Validaciones.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1505603345128" units="2" version="1.0"/>
+</session>

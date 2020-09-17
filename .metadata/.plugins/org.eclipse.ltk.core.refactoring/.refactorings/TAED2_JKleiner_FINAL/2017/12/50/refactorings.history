@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;TAED2_JKleiner_FINAL&apos;&#x0D;&#x0A;- Original project: &apos;TAED2_JKleiner_FINAL&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     modelo.Cliente.java&#x0D;&#x0A;     modelo.Domicilio.java&#x0D;&#x0A;     modelo.ProductoInformatico.java&#x0D;&#x0A;     modelo.Vehiculo.java" description="Delete elements" element1="/src&lt;modelo{Cliente.java" element2="/src&lt;modelo{Vehiculo.java" element3="/src&lt;modelo{ProductoInformatico.java" element4="/src&lt;modelo{Domicilio.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1512942427730" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;controlador&apos; to &apos;CodigoFuenteEjemplo/src&apos;&#x0D;&#x0A;- Original project: &apos;MVC_Practico&apos;&#x0D;&#x0A;- Destination element: &apos;CodigoFuenteEjemplo/src&apos;&#x0D;&#x0A;- Original element: &apos;MVC_Practico/src/controlador&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=CodigoFuenteEjemplo/src" element1="/src&lt;controlador" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1572905771780" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;TP4_KLEINER_CASEREZ/src&apos;&#x0D;&#x0A;- Original project: &apos;Parcial2_Kleiner&apos;&#x0D;&#x0A;- Destination element: &apos;TP4_KLEINER_CASEREZ/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Parcial2_Kleiner/src/lib&#x0D;&#x0A;     Parcial2_Kleiner/src/estructura" description="Copy packages" destination="=TP4_KLEINER_CASEREZ/src" element1="/src&lt;lib" element2="/src&lt;estructura" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1498600788839" version="1.0"/>
+</session>

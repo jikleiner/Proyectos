@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;lib&apos; to &apos;Librerias_ED/src&apos;&#x0D;&#x0A;- Original project: &apos;TP3_Kleiner&apos;&#x0D;&#x0A;- Destination element: &apos;Librerias_ED/src&apos;&#x0D;&#x0A;- Original element: &apos;TP3_Kleiner/src/lib&apos;" description="Copy package" destination="=Librerias_ED/src" element1="/src&lt;lib" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1498265102006" version="1.0"/>
+</session>

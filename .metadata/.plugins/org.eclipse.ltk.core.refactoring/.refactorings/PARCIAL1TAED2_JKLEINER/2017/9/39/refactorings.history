@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;TAED2_JKleiner_PARCIAL1/src/Estructuras&apos;&#x0D;&#x0A;- Original project: &apos;PARCIAL1TAED2_JKLEINER&apos;&#x0D;&#x0A;- Destination element: &apos;TAED2_JKleiner_PARCIAL1/src/Estructuras&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Estructuras.Nodo.java&#x0D;&#x0A;     Estructuras.Arbol.java" description="Copy compilation units" destination="=TAED2_JKleiner_PARCIAL1/src&lt;Estructuras" element1="/src&lt;Estructuras{Nodo.java" element2="/src&lt;Estructuras{Arbol.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1505859753971" units="2" version="1.0"/>
+</session>

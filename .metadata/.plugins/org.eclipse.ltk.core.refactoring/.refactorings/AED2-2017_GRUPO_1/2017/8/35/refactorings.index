@@ -1,0 +1,13 @@
+1503753954777	Rename package 'Model'
+1503753986840	Delete element
+1503762216489	Rename field 'scanner'
+1503769284456	Rename local variable 'fichero'
+1503769313722	Rename local variable 'directorio'
+1503775430595	Rename compilation unit 'charException.java'
+1503776457379	Delete element
+1503776465036	Delete element
+1503776470676	Delete element
+1503776489086	Rename type 'Validacion'
+1503852446330	Delete element
+1503852452893	Delete element
+1503869416453	Rename method 'cargarDependencias'

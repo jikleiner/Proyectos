@@ -1,0 +1,93 @@
+package estructura;
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
+
+public class GrafoIterador extends Grafo {
+
+	@Override
+	public void DFS(String inicio, String fin) {
+		// TODO Auto-generated method stub
+		Vertice verificador=new Vertice(fin);
+		String start = inicio;
+		String siguiente = start;
+		boolean encontrado = false;
+		boolean haySiguiente = false;
+		Stack<String> pilaCamino = new Stack();
+		ArrayList<String> listaVisitados = new ArrayList();
+		if (this.getListaVertices().contains(fin) == true) {
+			pilaCamino.add(start);
+			while (encontrado != true) {
+				haySiguiente = false;
+				for (int i = 0; i < this.getListaArista().size(); i++) {
+					if (getListaArista().get(i).getOrigen() == siguiente) {
+						if (listaVisitados.contains(getListaArista().get(i).getDestino()) == false) {
+							siguiente = getListaArista().get(i).getDestino();
+							pilaCamino.add(siguiente);
+							listaVisitados.add(siguiente);
+							haySiguiente = true;
+							break;
+						}
+					} else if (getListaArista().get(i).getDestino() == siguiente) {
+						if (listaVisitados.contains(getListaArista().get(i).getOrigen()) == false) {
+							siguiente = getListaArista().get(i).getOrigen();
+							pilaCamino.add(siguiente);
+							listaVisitados.add(siguiente);
+							haySiguiente = true;
+							break;
+						}
+					}
+				}
+				if (siguiente == fin) {
+					encontrado = true;
+				} else if (haySiguiente = false) {
+					pilaCamino.clear();
+					pilaCamino.add(start);
+				}
+			}
+			System.out.println("el menor camino entre los vertices es de :" + pilaCamino.size() + " aristas");
+		} else {
+			System.out.println("el nombre de vertice buscado no es valido");
+		}
+	}
+
+	@Override
+	public void BFS(String inicio, String fin) {
+		// TODO Auto-generated method stub
+		String start = inicio;
+		int aristas = 0;
+		boolean encontrado = false;
+		Queue<String> colaNoVisitados = new PriorityQueue<String>();
+		ArrayList<String> listaVisitados = new ArrayList();
+		// buscar vertices conectados a la raiz o inicio
+		if (this.getListaVertices().contains(fin) == true) {
+			colaNoVisitados.add(start);
+			while (colaNoVisitados.isEmpty() != false | encontrado != true) {
+				if (start != fin) {
+					for (int i = 0; i < this.getListaArista().size(); i++) {
+						if (getListaArista().get(i).getOrigen() == start) {
+							if (listaVisitados.contains(getListaArista().get(i).getDestino()) == false) {
+								colaNoVisitados.add(getListaArista().get(i).getDestino());
+							}
+						} else if (getListaArista().get(i).getDestino() == start) {
+							if (listaVisitados.contains(getListaArista().get(i).getOrigen()) == false) {
+								colaNoVisitados.add(getListaArista().get(i).getOrigen());
+							}
+						}
+					}
+					aristas++;
+					listaVisitados.add(colaNoVisitados.peek());
+					colaNoVisitados.remove();
+					start = colaNoVisitados.peek();
+				} else {
+					encontrado = true;
+				}
+			}
+		} else {
+			System.out.println("el nombre de vertice buscado no es valido");
+		}
+		System.out.println("el menor camino entre los vertices es de :" + aristas + " aristas");
+	}
+
+}

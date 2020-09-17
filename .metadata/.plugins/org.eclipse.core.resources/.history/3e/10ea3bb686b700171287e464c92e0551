@@ -1,0 +1,170 @@
+import java.util.ArrayList;
+
+public abstract class Grafo {
+	/*
+	 * ALGORITMOS:
+	 * 1  DFS
+	 * 2  BFS
+	 * 3  DIJKSTRA
+	 * 4  FLOY WARSHALL
+	 * 5  CAMINO MINIMO SIN CALCULAR COSTO DE ARISTAS
+	 * 6  CAMINO MINIMO ENTRE DOS NODOS CUALQUIERA CALCULANDO COSTO 
+	 */
+	private ArrayList<Vertice> listaVertices;
+	private ArrayList<Arista> listaArista;
+
+	public Grafo() {
+		super();
+		this.listaVertices=new ArrayList();
+		this.listaArista=new ArrayList();
+	}
+
+	
+		
+	@Override
+	public String toString() {
+		return "Grafo [listaVertices=" + listaVertices + ", listaArista=" + listaArista + "]";
+	}
+
+
+
+	protected ArrayList<Vertice> getListaVertices() {
+		return listaVertices;
+	}
+
+	protected ArrayList<Arista> getListaArista() {
+		return listaArista;
+	}
+
+	public void crearVertice(String nomb) {
+		Vertice v = new Vertice(nomb);
+		listaVertices.add(v);
+	}
+
+	public void crearArista(String origen, String destino, int peso){
+		//ver tema de vertices que puedan estar no creados y se deseen incluir en la arista
+		Arista a = new Arista(origen, destino, peso);
+		listaArista.add(a);
+	}
+	
+	public abstract void DFS(String inicio, String fin);
+	
+	public abstract void BFS(String inicio, String fin);
+	
+	public void dijkstra(Vertice origen){
+		Vertice x = origen;//nodo inicial
+		Vertice a = x;//nodo copia inicial
+		int[] dCosto = new int[listaVertices.size()];//lista de costos
+		ArrayList<String> dNombre = new ArrayList();//lista de vertices
+		String camino=null;
+		ArrayList<String> marcados = new ArrayList();
+		for(int i=0; i<dCosto.length;i++){
+			dCosto[i]=-1;
+			if(listaVertices.get(i).compareTo(x)!=0){
+				marcados.add(listaVertices.get(i).getNombre());
+			}
+		}
+		dCosto[0]=0;
+		dNombre.add(a.getNombre());
+		int auxCosto = 0;
+		for(int i=0;i<marcados.size();i++){
+			//examinar de las aristas todas las que tengan como nodo inicial a "a"
+			for(int j=0;j<listaArista.size();j++){
+				if(listaArista.get(j).getOrigen()==dNombre[i-1]){
+					auxCosto=listaArista.get(j).getCosto()+dCosto[i-1];
+					if(dCosto[i]<0|dCosto[i]>auxCosto){
+						dCosto[i]=auxCosto;
+						dNombre[i]=listaArista.get(j).getDestino();
+					}
+				}
+				if(listaArista.get(j).getDestino()==dNombre[i-1]){
+					auxCosto=listaArista.get(j).getCosto()+dCosto[i-1];
+					if(dCosto[i]<0|dCosto[i]>auxCosto){
+						dCosto[i]=auxCosto;
+						dNombre[i]=listaArista.get(j).getOrigen();
+					}
+				}
+
+			}
+			marcados.remove(dNombre[i]);
+		}
+		for(int i=0;i<dNombre.length;i++){
+			if(dNombre[i]!=null){
+				camino+=dNombre[i]+" ";
+			}
+		}
+		System.out.println("camino minimo es el de los vertices: - "+camino);
+		System.out.println("con un costo total acumulado de:     - "+dCosto[dCosto.length-1]);
+	}
+	
+	public void floydWarshall(String ini, String fin){
+		String[][]vec=new String[listaVertices.size()][listaVertices.size()];
+		int[][]cos=new int[listaVertices.size()][listaVertices.size()];
+		int fila=0;
+		int columna=0;
+		int k=0;
+		/*
+		 * se carga la matriz dependencia del algoritmo
+		 */
+		for(int i=0;i<cos.length;i++){
+			for(int j=0;j<cos.length;j++){
+				cos[i][j]=99999;
+			}
+		}
+		for(int i=0;i<listaArista.size();i++){
+			Arista aux = listaArista.get(i);
+			while(listaVertices.get(fila).getNombre()!=aux.getOrigen()&fila<=listaVertices.size()){
+				fila++;
+			}
+			while(listaVertices.get(columna).getNombre()!=aux.getDestino()&columna<=listaVertices.size()){
+				columna++;
+			}
+			vec[fila][columna]=aux.getDestino();
+			vec[columna][fila]=aux.getOrigen();
+			
+			cos[fila][columna]=aux.getCosto();
+			cos[columna][fila]=aux.getCosto();
+			fila=0;
+			columna=0;
+		}
+		/*
+		 * algoritmo de resolucion
+		 */
+		while(k<vec.length){
+			for(fila=0;fila<vec.length;fila++){
+				for(columna=0;columna<vec.length;columna++){
+					if(fila!=k&columna!=k&fila!=columna){
+						if((cos[fila][k]+cos[k][columna])<cos[fila][columna]){
+							vec[fila][columna]=vec[k][columna];
+							cos[fila][columna]=cos[fila][k]+cos[k][columna];
+						}
+					}
+				}
+			}
+			k++;
+		}
+		/*
+		 * se devuelve el valor del camino optimo
+		 */
+		Vertice start=new Vertice(ini);
+		Vertice end=new Vertice(fin);
+		int i=0;
+		int j=0;
+		while(i<listaVertices.size()){
+			if(listaVertices.get(i).compareTo(start)==0){
+				break;
+			}else{
+				i++;
+			}
+		}
+		while(j<listaVertices.size()){
+			if(listaVertices.get(j).compareTo(end)==0){
+				break;
+			}else{
+				j++;
+			}
+		}
+		System.out.println("el camino de menor costo entre los vertices "+ini+" - "+fin+": "+cos[i][j]);
+	}
+	
+}

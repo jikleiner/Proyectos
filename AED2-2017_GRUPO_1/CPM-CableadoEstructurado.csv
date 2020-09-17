@@ -1,0 +1,8 @@
+Codigo;Nombre;Precedencias;Tiempos
+A;Compra de elementos e insumos;;0
+B;instalacion de cable canal;A;10
+C;instalacion electrica;A;5
+D;instalacioón de racks;A;15
+E;instalacion de patcheras;B;1
+F;Paso de Cables;B C D;12
+G;Certificacion cableado;E F;5

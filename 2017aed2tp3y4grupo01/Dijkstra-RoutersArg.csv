@@ -1,0 +1,44 @@
+Codigo;Nombre;Tipo;Peso;Origen;Destino
+A;Router Cordoba;N;;;
+B;Router Santiago del Estero;N;;;
+C;Router Tucuman;N;;;
+D;Router San Luis;N;;;
+E;Router La rioja;N;;;
+F;Router Mendoza;N;;;
+G;Router Chaco;N;;;
+H;Router Neuquen;N;;;
+I;Router Chubut;N;;;
+J;Router Corrientes;N;;;
+K;Router Santa fe;N;;;
+L;Router Entre Rios;N;;;
+M;Router La pampa;N;;;
+N;Router Rio Negro;N;;;
+P;Router Buenos Aires;N;;;
+Q;;A;8;A;B
+R;;A;5;A;D
+S;;A;4;A;E
+T;;A;12;B;E
+U;;A;4;B;F
+V;;A;3;B;C
+W;;A;9;C;F
+X;;A;11;C;G
+Y;;A;9;D;E
+Z;;A;6;D;H
+AA;;A;3;E;F
+AB;;A;5;E;J
+AC;;A;8;E;I
+AD;;A;1;F;G
+AE;;A;8;F;K
+AF;;A;7;G;L
+AG;;A;8;G;K
+AH;;A;2;H;I
+AI;;A;7;H;M
+AJ;;A;10;I;J
+AK;;A;6;I;M
+AL;;A;6;J;K
+AM;;A;9;J;N
+AN;;A;5;K;L
+AO;;A;7;K;P
+AP;;A;6;L;P
+AQ;;A;2;M;N
+AR;;A;12;N;P

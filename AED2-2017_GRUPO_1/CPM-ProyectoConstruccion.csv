@@ -1,0 +1,13 @@
+Codigo;Nombre;Precedencias;Tiempos
+A;Obras preliminares;;10
+B;Movimiento de Tierra;A;15
+C;Cimientos;B;12
+D;Muros;B;9
+E;Columnas;B;26
+F;Techos;C;7
+G;Inst. Sanitarias;C;4
+H;Inst. Eléctricas;D;18
+I;Revestimientos;F;15
+J;Torre tanque de agua;F G;13
+K;Acabados;H I;10
+L;Entrega de obra;E J K;0
